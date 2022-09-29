@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Diary_Calendar/static/css/main.3cd5a134.css",
-    "main.js": "/Diary_Calendar/static/js/main.d78494b2.js",
+    "main.js": "/Diary_Calendar/static/js/main.db199651.js",
     "static/js/787.aa1d4325.chunk.js": "/Diary_Calendar/static/js/787.aa1d4325.chunk.js",
     "index.html": "/Diary_Calendar/index.html",
     "main.3cd5a134.css.map": "/Diary_Calendar/static/css/main.3cd5a134.css.map",
-    "main.d78494b2.js.map": "/Diary_Calendar/static/js/main.d78494b2.js.map",
+    "main.db199651.js.map": "/Diary_Calendar/static/js/main.db199651.js.map",
     "787.aa1d4325.chunk.js.map": "/Diary_Calendar/static/js/787.aa1d4325.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3cd5a134.css",
-    "static/js/main.d78494b2.js"
+    "static/js/main.db199651.js"
   ]
 }
