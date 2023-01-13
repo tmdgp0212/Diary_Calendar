@@ -99,7 +99,7 @@ const MonthlyList = () => {
                 />
                 <UnderBtn
                     text={<BsPlusLg />}
-                    onClick={useCallback(() => navigate("/new"), [])}
+                    onClick={useCallback(() => navigate("/new/today"), [])}
                 />
             </FloatingBtn>
         </ListContainer>

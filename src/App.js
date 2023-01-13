@@ -138,6 +138,7 @@ function App() {
               <Route path="/list" element={<MonthlyList />} />
               <Route path="/diary/:id" element={<Diary />} />
               <Route path="/new" element={<NewDiary />} />
+              <Route path="/new/:date" element={<NewDiary />} />
               <Route path="/edit/:id" element={<Edit />} />
               <Route path="*" element={<NotFound />} />
             </Routes>

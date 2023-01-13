@@ -77,7 +77,7 @@ const Calendar = () => {
         />
         <UnderBtn
           text={<BsPlusLg />}
-          onClick={useCallback(() => navigate("/new"), [])}
+          onClick={useCallback(() => navigate("/new/today"), [])}
         />
       </FloatingBtn>
     </CalContainer>

@@ -101,7 +101,7 @@ const EditorContainer = styled.div`
   } //editor
 `;
 
-const DiaryEditor = ({ isEdit, curDiary }) => {
+const DiaryEditor = ({ isEdit, curDiary, today }) => {
   const navigate = useNavigate();
   const { createDiary, editDiary } = useContext(fnContext);
 
@@ -112,7 +112,7 @@ const DiaryEditor = ({ isEdit, curDiary }) => {
 
   const [title, setTitle] = useState("");
   const [text, setText] = useState("");
-  const [date, setDate] = useState(GetDate(new Date(nowDate).getTime()));
+  const [date, setDate] = useState(GetDate(today ? new Date().getTime() : new Date(nowDate).getTime()));
 
   const handleCreateBtn = () => {
     if (title.length < 1) {
