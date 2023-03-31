@@ -2,7 +2,7 @@
 
 일기를 쓰고 관리 할 수 있는 달력형 다이어리입니다
 
-데모사이트 : [DEMO](https://github.com/tmdgp0212/Diary_Calendar)
+데모사이트 : [DEMO](https://tmdgp0212.github.io/Diary_Calendar)
 
 작업기간 : 22.09.29 ~ 22.10.05 (총 8일)
 
