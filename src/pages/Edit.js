@@ -1,10 +1,10 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { stateContext } from "../App";
 import DiaryEditor from "../components/DiaryEditor";
+import { useSelector } from "react-redux";
 
 const Edit = () => {
-  const { diary } = useContext(stateContext);
+  const { diary } = useSelector((state) => state.diary);
   const { id } = useParams();
 
   const [curDiary, setCurDiary] = useState([]);

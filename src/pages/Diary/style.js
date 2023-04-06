@@ -1,12 +1,6 @@
-import { useCallback, useContext, useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import { fnContext, stateContext } from "../App";
-import { GetDate } from "../util/GetDate";
 import styled from "styled-components";
-import MyHeader from "../components/MyHeader";
-import TopButton from "../components/TopButton";
 
-const DiaryContainer = styled.div`
+export const DiaryContainer = styled.div`
   display: flex;
   flex-direction: column;
 
@@ -90,57 +84,3 @@ const DiaryContainer = styled.div`
     }
   }
 `;
-
-const Diary = () => {
-  const { id } = useParams();
-  const [curDiary, setCurDiary] = useState("");
-  const [date, setDate] = useState("");
-
-  const navigate = useNavigate();
-
-  const { diary } = useContext(stateContext);
-  const { removeDiary } = useContext(fnContext);
-
-  useEffect(() => {
-    setCurDiary(diary.find((it) => parseInt(it.id) === parseInt(id)));
-
-    if (curDiary) {
-      setDate(GetDate(curDiary.date));
-    }
-  }, [curDiary, diary]);
-
-  const handleRemoveBtn = () => {
-    if (window.confirm("일기를 삭제하시겠습니까?")) {
-      removeDiary(parseInt(id));
-      navigate("/", { replace: true });
-    }
-  };
-
-  return (
-    <DiaryContainer>
-      <MyHeader
-        headText={"일기장"}
-        leftBtn={<TopButton text={"< 뒤로가기"} onClick={() => navigate(-1)} />}
-      />
-      <div className="diary">
-        <div className="title">
-          <h2>{curDiary.title}</h2>
-          <p>{date}</p>
-        </div>
-        <div className="text">
-          <p>{curDiary.text}</p>
-        </div>
-        <div className="btn_box">
-          <button onClick={useCallback(() => navigate(`/edit/${id}`), [])}>
-            수정
-          </button>
-          <button className="del" onClick={handleRemoveBtn}>
-            삭제
-          </button>
-        </div>
-      </div>
-    </DiaryContainer>
-  );
-};
-
-export default Diary;

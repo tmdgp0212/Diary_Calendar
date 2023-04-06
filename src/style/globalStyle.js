@@ -1,5 +1,6 @@
-@charset "utf-8";
+import { createGlobalStyle } from "styled-components";
 
+export const GlobalStyle = createGlobalStyle`
 * {
    margin: 0;
    padding: 0;
@@ -42,3 +43,5 @@ body {
    line-height: 1.25em;
    background-color: #ecedf1;
 }
+
+`;
