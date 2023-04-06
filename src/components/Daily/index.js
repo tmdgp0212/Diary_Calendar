@@ -14,9 +14,6 @@ const Daily = ({ daily, firstDay }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log(diary);
-  }, [diary]);
-  useEffect(() => {
     const targetDiary = diary.filter((it) => {
       if (new Date(it.date).getFullYear() === new Date(date).getFullYear()) {
         if (new Date(it.date).getMonth() === new Date(date).getMonth()) {
