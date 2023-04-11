@@ -9,7 +9,8 @@
 작업인원 : 1인
 
 사용언어 : `React`
-(react-router-dom , styled-components)
+
+프레임워크 & 라이브러리 : axios , redux , redux-toolkit , react-router-dom , styled-components 
 
 작업목표 : 
 - 리액트를 활용하여 페이지 전환이 가능한 SPA(Single Page Application)을 구현한다
